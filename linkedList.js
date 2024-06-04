@@ -1,22 +1,43 @@
+import Node from "./node.js";
+
 export default class LinkedList {
     constructor() {
-        this.head = {};
+        this.listHead = null;
     }
 
-    prepend(node) {
-        this.head = node;
+    prepend(value) {
+        let tmp = null;
+        if (this.listHead != null) tmp = this.listHead;
+        this.listHead = new Node(value);
+        this.listHead.nextNode = tmp;
     }
 
-    append(node) {
-        if (this.head == null) {
-            this.prepend(node);
-        } else {
-            let tmp = this.head;
-            while (tmp.nextNode != null) {
-                tmp = tmp.nextNode;
-            }
-
-            tmp.nextNode = node;
+    append(value) {
+        if (this.listHead == null) this.prepend(value);
+        else {
+            let tmp = this.listHead;
+            while (tmp.nextNode != null) tmp = tmp.nextNode;
+            tmp.nextNode = new Node(value);
         }
+    }
+
+    size() {
+        let tmp = this.listHead;
+        let counter = 0;
+        while (tmp != null) {
+            counter++;
+            tmp = tmp.nextNode
+        }
+        return counter;
+    }
+
+    head() {
+        return this.listHead;
+    }
+
+    tail() {
+        let tmp = this.listHead;
+        while (tmp.nextNode != null) tmp = tmp.nextNode;
+        return tmp;
     }
 }
