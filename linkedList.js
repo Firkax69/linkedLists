@@ -70,7 +70,7 @@ export default class LinkedList {
     }
 
 
-    
+
     find(value) {
         let tmp = this.listHead;
         let index = 0;
@@ -84,7 +84,7 @@ export default class LinkedList {
 
 
 
-    tostring() {
+    toString() {
         let tmp = this.listHead;
         let stringList = '';
         while (tmp != null) {
