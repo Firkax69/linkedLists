@@ -1,10 +1,16 @@
-# linkedLists
+# Linked Lists project un NodeJS
 
-To run check run 'node index.js' in terminal;
+1. Clone this repository to your local machine:
+`git clone git@github.com:Firkax69/linkedLists.git`
 
-------------------
+2. Make sure node installed, verify this running:
+`node -v`
 
-Linked list singly realised by JavaScript
+3. To run check run `node index.js` in terminal;
+
+-  -  -  -  -  -  -
+
+## Linked list singly realised by JavaScript
 
 append(value) adds a new node containing value to the end of the list or to start if list is empty
 
